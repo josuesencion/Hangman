@@ -1,3 +1,9 @@
+/*
+ *
+ * Author: Josue Sencion
+ *
+ */
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,10 +31,10 @@ public class HangmanLexicon {
         return hint;
     }
 
-    public ArrayList<String> retrieveLexicon(){
+    public ArrayList<String> retrieveLexicon() {
         ArrayList<String> lexicon = new ArrayList<>();
         String word;
-        try (BufferedReader file = new BufferedReader(new FileReader(fileName))){
+        try (BufferedReader file = new BufferedReader(new FileReader(fileName))) {
             while ((word = file.readLine()) != null) {
                 lexicon.add(word);
             }
@@ -47,8 +53,7 @@ public class HangmanLexicon {
         return lex.get(rand.nextInt(lex.size()));
     }
 
-
-    private String hintGen(){
+    private String hintGen() {
         StringBuilder hint = new StringBuilder();
         for (int i = 0; i < this.randWord.length(); i++) {
             hint.append("-");
