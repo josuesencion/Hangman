@@ -1,3 +1,7 @@
+/*
+Josue Sencion
+* */
+
 import java.util.Scanner;
 
 public class HagmanApp {
