@@ -1,6 +1,8 @@
 /*
-Josue Sencion
-* */
+*
+* Author: Josue Sencion
+*
+*/
 
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ public class HangmanApp {
     final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Welcome to hangman");
+        System.out.println("Welcome to Hangman!");
 
         char playAgain;
 
@@ -21,7 +23,7 @@ public class HangmanApp {
                 game.showGuessesLeft();
                 System.out.print("Your guess: ");
                 char guess = scanner.nextLine().toUpperCase().charAt(0);
-                game.vefiryGuess(guess);
+                game.verifyGuess(guess);
             }
 
             if (game.compareSecretWord()) {
@@ -33,5 +35,7 @@ public class HangmanApp {
             System.out.print("Would you like to play again? Y/N: ");
             playAgain = scanner.nextLine().charAt(0);
         } while (playAgain == 'Y' || playAgain == 'y');
+
+        scanner.close();
     }
 }
