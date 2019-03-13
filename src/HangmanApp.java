@@ -19,6 +19,7 @@ public class HangmanApp {
             Hangman game = new Hangman(lexicon.getRandWord(), lexicon.getHint());
 
             while (!game.compareSecretWord() && game.getGuessesLeft() != 0) {
+                game.drawStickFigure();
                 game.displayHint();
                 game.showGuessesLeft();
                 System.out.print("Your guess: ");
@@ -27,8 +28,10 @@ public class HangmanApp {
             }
 
             if (game.compareSecretWord()) {
+                game.drawStickFigure();
                 System.out.println("You guessed the word: " + game.getSecretWord());
             } else {
+                game.drawStickFigure();
                 System.out.println("You lost. The word is: " + game.getSecretWord());
             }
 
