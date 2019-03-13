@@ -19,7 +19,7 @@ public class Hangman {
         this.wordLength = secretWord.length();
     }
 
-    public boolean verifyGuess(char guess) {
+    public void verifyGuess(char guess) {
         ArrayList<Integer> wordChars = new ArrayList<>();
         char wordChar;
         for (int i = 0; i < this.wordLength; i++) {
@@ -32,11 +32,9 @@ public class Hangman {
             modifyHint(wordChars, guess);
             wordChars.clear();
             System.out.println("That guess is correct.");
-            return true;
         } else {
             System.out.println("There are no " + guess + "'s in the word.");
             this.guessesLeft--;
-            return false;
         }
 
     }
